@@ -15,6 +15,7 @@ Here are some of the documents from Apple that informed the style guide. If some
 
 * [Dot Notation Syntax](#dot-notation-syntax)
 * [Spacing](#spacing)
+* [Brackets](#brackets)
 * [Conditionals](#conditionals)
   * [Ternary Operator](#ternary-operator)
 * [Error handling](#error-handling)
@@ -57,20 +58,50 @@ UIApplication.sharedApplication.delegate;
 
 * Indent using 4 spaces. Never indent with tabs. Be sure to set this preference in Xcode.
 * Method braces and other braces (`if`/`else`/`switch`/`while` etc.) always open on the same line as the statement but close on a new line.
-* In if-else statement you can add new line after closing bracket if you want.
 
 **For example:**
 ```objc
 if (user.isHappy) {
     // Do something
-} 
-else {
+} else {
     // Do something else
 }
 ```
 * There should be exactly one blank line between methods to aid in visual clarity and organization.
 * Whitespace within methods should be used to separate functionality (though often this can indicate an opportunity to split the method into several, smaller methods). In methods with long or verbose names, a single line of whitespace may be used to provide visual separation before the method’s body.
 * `@synthesize` and `@dynamic` should each be declared on new lines in the implementation.
+
+## Brackets
+
+Egyptian brackets are to be used for method implementations, conditions (if/else/switch/while etc.) and other cases as well:
+
+**Like this:**
+```objc
+if ([user isHappy]) {
+    // Do something
+} else {
+    // Do something else
+}
+
+- (void)myMethod {
+    // Do something
+}
+```
+
+**Not:**
+```objc
+if ([user isHappy]) {
+    //Do something
+}
+else {
+    //Do something else
+}
+
+- (void)myMethod
+{
+    // Do something
+}
+```
 
 ## Conditionals
 
