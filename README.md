@@ -59,12 +59,13 @@ UIApplication.sharedApplication.delegate;
 
 * Indent using 4 spaces. Never indent with tabs. Be sure to set this preference in Xcode.
 * Method braces and other braces (`if`/`else`/`switch`/`while` etc.) always open on the same line as the statement but close on a new line.
+* In if-else statement you can add new line after closing bracket if you want.
 
 **For example:**
 ```objc
 if (user.isHappy) {
     // Do something
-}
+} 
 else {
     // Do something else
 }
