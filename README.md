@@ -316,7 +316,17 @@ Block comments should generally be avoided, as code should be as self-documentin
     if (self) {
         // Custom initialization
     }
+    return self;
+}
+```
 
+Or this:
+
+```objc
+- (instancetype)init {
+    if (self = [super init]) {
+        // Custom initialization
+    }
     return self;
 }
 ```
