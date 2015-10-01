@@ -431,12 +431,12 @@ typedef NS_OPTIONS(NSUInteger, NYTAdCategory) {
 
 ## Private Properties
 
-Private properties should be declared in class extensions (anonymous categories) in the implementation file of a class.
+Private properties should be declared in class extensions (anonymous categories) or in (Private) category in the implementation file of a class.
 
 **For example:**
 
 ```objc
-@interface NYTAdvertisement ()
+@interface NYTAdvertisement (Private)
 
 @property (nonatomic, strong) GADBannerView *googleAdView;
 @property (nonatomic, strong) ADBannerView *iAdView;
